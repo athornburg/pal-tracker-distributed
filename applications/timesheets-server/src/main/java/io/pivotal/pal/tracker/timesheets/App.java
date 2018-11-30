@@ -12,10 +12,10 @@ import org.springframework.web.client.RestOperations;
 import java.util.TimeZone;
 
 
+@EnableCircuitBreaker
+@EnableEurekaClient
 @SpringBootApplication
 @ComponentScan({"io.pivotal.pal.tracker.timesheets", "io.pivotal.pal.tracker.restsupport"})
-@EnableEurekaClient
-@EnableCircuitBreaker
 public class App {
 
     public static void main(String[] args) {
