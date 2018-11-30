@@ -35,9 +35,4 @@ public class ProjectClient {
         logger.info("Getting project with id {} from cache", projectId);
         return projectsCache.get(projectId);
     }
-
-    public ProjectInfo getProjectFromCache(long projectId) {
-        logger.info("Getting project with id {} from cache", projectId);
-        return projectsCache.get(projectId);
-    }
 }
