@@ -24,11 +24,13 @@ public class OuathResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+        // enforce authentication on our API endpoints.
         http.authorizeRequests().anyRequest().authenticated();
     }
 
     @Override
     public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+        // do not require a resource id in AccessToken.
         resources.resourceId(null);
     }
 }

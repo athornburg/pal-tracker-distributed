@@ -4,12 +4,11 @@ applications:
   routes:
   - route: registration-pal-al-pal-2018.cfapps.io
   memory: 1G
+  instances: 1
   env:
     GRANT_TYPE: client_credentials
-  instances: 1
   services:
-  - tracker-service-registry
   - tracker-registration-database
-  - tracker-circuit-breaker-dashboard
-  - tracker-config-server
+  - tracker-service-registry
   - tracker-sso
+  - tracker-config-server
