@@ -4,8 +4,14 @@ applications:
   routes:
   - route: registration-pal-al-pal-2018.cfapps.io
   memory: 1G
+  env:
+    GRANT_TYPE: client_credentials
+    SPRING_SECURITY_USER_NAME: actuator
+    SPRING_SECURITY_USER_PASSWORD: operations4red
+    SPRING_SECURITY_USER_ROLES: ACTUATOR
   instances: 1
   services:
   - tracker-service-registry
   - tracker-registration-database
   - tracker-circuit-breaker-dashboard
+  - tracker-sso
