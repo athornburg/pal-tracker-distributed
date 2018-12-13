@@ -6,12 +6,10 @@ applications:
   memory: 1G
   env:
     GRANT_TYPE: client_credentials
-    SPRING_SECURITY_USER_NAME: actuator
-    SPRING_SECURITY_USER_PASSWORD: operations4red
-    SPRING_SECURITY_USER_ROLES: ACTUATOR
   instances: 1
   services:
   - tracker-backlog-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-config-server
   - tracker-sso
